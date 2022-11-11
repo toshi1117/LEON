@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+body {
+  line-height: 1.6;
+}
+a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  
+}
+li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+}
+
+/*--------------------メインビジュアル---------------------*/
+.mainvisual {
+  position: relative;
+  background-image: url(img/メインビジュアル.jpg);
+  width: 100vw;
+  height: 120vh;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  color: #FFF;
+  font-size: 72px;
+}
+
+
+
+.wrapper {
+  width: 90vw;
+  margin: 0 auto;
+}
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+main .top-text {
+  text-align: center;
+  margin-top: 300px;
+  margin-bottom: 400px;
+  font-size: large;
+}
+.header-logo {
+  padding: 20px;
+  font-size: 30px;
+}
+.list {
+  padding: 20px;
+}
+
+
+/*--------------------------------------------
+イントロダクション
+---------------------------------------------*/
+#introduction h1 {
+  margin-top: 200px;
+}
+#introduction .text {
+  margin-top: 100px;
+  padding: 0 100px;
+}
+
+
+/*---------------------キャラクター-------------*/
+#characters h1 {
+  margin-top: 200px;
+}
+
+img {
+  width: 40VW;
+  height: 50vh;
+  object-fit: cover;
+}
+ 
+#characters .container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.item {
+  margin: auto 100px;
+}
+
+/*==================================================
+ボンッ、ヒュッ
+===================================*/
+
+/* 拡大 */
+.zoom-in{
+  animation-name:zoomInAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes zoomInAnime{
+  from {
+  transform: scale(0.6);
+  opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+  opacity: 1;
+  }
+}
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定 */
+ 
+.zoomInTrigger,
+.zoomOutTrigger{
+    opacity: 0;
+}
+
+/*------------------------予告------------------------*/
+#trailer h1 {
+  margin-top: 200px;
+}
+
+
+.youtube {
+  text-align: center;
+}
+
+/*-----------------------------------------
+フッター
+-----------------------------------------*/
+
+footer .container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 60px 0;
+  padding: 0 30px;
+}
+footer .section {
+  margin-left: 200px;
+  font-size: large;
+}
+.copyright {
+  text-align: center;
+  font-size: small;
+  margin-bottom: 50px;
+}
+footer span {
+  font-weight: bold;
+}
+footer {
+  margin-top: 100px;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 900px) {
+
+  .container:nth-of-type(2n-1) {
+    flex-direction: column-reverse;
+  }
+  .container:nth-of-type(2n) {
+  flex-direction: column;
+}
+
+img {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+}
